@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PElIMPAHAN DIGIDAL-PHU ACEH</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header class="form-header">
+            <div class="header-layout">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Logo Kemenag" class="header-logo"/>
+                </div>
+                <div class="header-content">
+                    <h1>KANTOR WILAYAH KEMENTERIAN AGAMA PROVINSI ACEH</h1>
+                    <p>JALAN TGK. ABU LAIN U NO. 9 BANDA ACEH</p>
+                    <h2>FORMULIR PENDAFTARAN PELIMPAHAN NOMOR PORSI HAJI</h2>
+                    <h3>JEMAAH HAJI MENINGGAL/SAKIT PERMANEN</h3>
+                </div>
+            </div>
+        </header>
+
+        <form id="hajjForm" class="hajj-form">
+            <!-- Section A: Jemaah Pemberi Pelimpahan -->
+            <div class="form-section">
+                <h3 class="section-title">A. JEMAAH PEMBERI PELIMPAHAN NOMOR PORSI HAJI</h3>
+                
+                <div class="form-row">
+                    <label>1. Tgl. Wafat/Sakit:</label>
+                    <div class="date-inputs">
+                        <input type="text" maxlength="2" class="date-box" id="deathDay"> -
+                        <input type="text" maxlength="2" class="date-box" id="deathMonth"> -
+                        <span>20</span><input type="text" maxlength="2" class="date-box" id="deathYear">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>2. No. Porsi:</label>
+                    <div class="porsi-inputs">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi1">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi2">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi3">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi4">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi5">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi6">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi7">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi8">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi9">
+                        <input type="text" maxlength="1" class="porsi-box" id="porsi10">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>3. Tempat Daftar Haji:</label>
+                    <input type="text" class="text-input" id="tempatDaftar" placeholder="Kab./Kota">
+                </div>
+
+                <div class="form-row">
+                    <label>4. Nama Pemberi:</label>
+                    <input type="text" class="text-input" id="namaPemberi">
+                </div>
+
+                <div class="form-row">
+                    <label>5. Tempat/Tgl. Lahir:</label>
+                    <input type="text" class="text-input-small" id="tempatLahirPemberi" placeholder="Tempat Lahir">
+                    <span>Tanggal Lahir</span>
+                    <div class="date-inputs">
+                        <input type="text" maxlength="2" class="date-box" id="tglLahirPemberi"> -
+                        <input type="text" maxlength="2" class="date-box" id="blnLahirPemberi"> -
+                        <input type="text" maxlength="4" class="date-box-year" id="thnLahirPemberi">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section B: Jemaah Penerima Pelimpahan -->
+            <div class="form-section">
+                <h3 class="section-title">B. JEMAAH PENERIMA PELIMPAHAN NOMOR PORSI HAJI</h3>
+
+                <div class="form-row">
+                    <label>1. No. NIK:</label>
+                    <div class="nik-inputs">
+                        <input type="text" maxlength="1" class="nik-box" id="nik1">
+                        <input type="text" maxlength="1" class="nik-box" id="nik2">
+                        <input type="text" maxlength="1" class="nik-box" id="nik3">
+                        <input type="text" maxlength="1" class="nik-box" id="nik4">
+                        <input type="text" maxlength="1" class="nik-box" id="nik5">
+                        <input type="text" maxlength="1" class="nik-box" id="nik6">
+                        <input type="text" maxlength="1" class="nik-box" id="nik7">
+                        <input type="text" maxlength="1" class="nik-box" id="nik8">
+                        <input type="text" maxlength="1" class="nik-box" id="nik9">
+                        <input type="text" maxlength="1" class="nik-box" id="nik10">
+                        <input type="text" maxlength="1" class="nik-box" id="nik11">
+                        <input type="text" maxlength="1" class="nik-box" id="nik12">
+                        <input type="text" maxlength="1" class="nik-box" id="nik13">
+                        <input type="text" maxlength="1" class="nik-box" id="nik14">
+                        <input type="text" maxlength="1" class="nik-box" id="nik15">
+                        <input type="text" maxlength="1" class="nik-box" id="nik16">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>2. Nama Penerima:</label>
+                    <input type="text" class="text-input" id="namaPenerima">
+                </div>
+
+                <div class="form-row">
+                    <label>3. Nama Ayah Kandung:</label>
+                    <input type="text" class="text-input" id="namaAyah">
+                </div>
+
+                <div class="form-row">
+                    <label>4. Tempat/Tgl. Lahir:</label>
+                    <input type="text" class="text-input-small" id="tempatLahirPenerima" placeholder="Tempat Lahir">
+                    <span>Tanggal Lahir</span>
+                    <div class="date-inputs">
+                        <input type="text" maxlength="2" class="date-box" id="tglLahirPenerima"> -
+                        <input type="text" maxlength="2" class="date-box" id="blnLahirPenerima"> -
+                        <input type="text" maxlength="4" class="date-box-year" id="thnLahirPenerima">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>5. Jenis Kelamin:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="jenisKelamin" value="Pria" id="pria">
+                        <label for="pria">1. Pria</label>
+                        <input type="radio" name="jenisKelamin" value="Wanita" id="wanita">
+                        <label for="wanita">2. Wanita</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>6. Status Hubungan:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="statusHubungan" value="Suami" id="suami">
+                        <label for="suami">1. Suami</label>
+                        <input type="radio" name="statusHubungan" value="Istri" id="istri">
+                        <label for="istri">2. Istri</label>
+                        <input type="radio" name="statusHubungan" value="Ayah" id="ayah">
+                        <label for="ayah">3. Ayah</label>
+                        <input type="radio" name="statusHubungan" value="Ibu" id="ibu">
+                        <label for="ibu">4. Ibu</label>
+                        <input type="radio" name="statusHubungan" value="Anak Kandung" id="anakKandung">
+                        <label for="anakKandung">5. Anak Kandung</label>
+                        <input type="radio" name="statusHubungan" value="Saudara Kandung" id="saudaraKandung">
+                        <label for="saudaraKandung">6. Saudara Kandung</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>7. Alamat Lengkap:</label>
+                    <input type="text" class="text-input" id="alamatLengkap">
+                    <div class="address-detail">
+                        <label>No.</label>
+                        <input type="text" class="small-box" id="noRumah">
+                        <label>RT/RW</label>
+                        <input type="text" class="small-box" id="rt">
+                        <span>/</span>
+                        <input type="text" class="small-box" id="rw">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>8. Kelurahan/Desa:</label>
+                    <input type="text" class="text-input" id="kelurahan">
+                </div>
+
+                <div class="form-row">
+                    <label>9. Kecamatan:</label>
+                    <input type="text" class="text-input" id="kecamatan">
+                </div>
+
+                <div class="form-row">
+                    <label>10. Kabupaten/Kota:</label>
+                    <input type="text" class="text-input" id="kabupaten">
+                    <span class="province">Provinsi Aceh</span>
+                </div>
+
+                <div class="form-row">
+                    <label>11. Nomor HP:</label>
+                    <div class="phone-inputs">
+                        <input type="text" maxlength="1" class="phone-box" id="hp1">
+                        <input type="text" maxlength="1" class="phone-box" id="hp2">
+                        <input type="text" maxlength="1" class="phone-box" id="hp3">
+                        <input type="text" maxlength="1" class="phone-box" id="hp4">
+                        <input type="text" maxlength="1" class="phone-box" id="hp5">
+                        <input type="text" maxlength="1" class="phone-box" id="hp6">
+                        <input type="text" maxlength="1" class="phone-box" id="hp7">
+                        <input type="text" maxlength="1" class="phone-box" id="hp8">
+                        <input type="text" maxlength="1" class="phone-box" id="hp9">
+                        <input type="text" maxlength="1" class="phone-box" id="hp10">
+                        <input type="text" maxlength="1" class="phone-box" id="hp11">
+                        <input type="text" maxlength="1" class="phone-box" id="hp12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>12. Pekerjaan:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="pekerjaan" value="PNS" id="pns">
+                        <label for="pns">1. PNS</label>
+                        <input type="radio" name="pekerjaan" value="TNI/Polri" id="tni">
+                        <label for="tni">2. TNI/Polri</label>
+                        <input type="radio" name="pekerjaan" value="Dagang" id="dagang">
+                        <label for="dagang">3. Dagang</label>
+                        <input type="radio" name="pekerjaan" value="Tani/Nelayan" id="tani">
+                        <label for="tani">4. Tani/Nelayan</label>
+                        <input type="radio" name="pekerjaan" value="Swasta" id="swasta">
+                        <label for="swasta">5. Swasta</label>
+                        <input type="radio" name="pekerjaan" value="IRT" id="irt">
+                        <label for="irt">6. IRT</label>
+                        <input type="radio" name="pekerjaan" value="Pelajar/Mahasiswa" id="pelajar">
+                        <label for="pelajar">7. Pelajar/Mahasiswa</label>
+                        <input type="radio" name="pekerjaan" value="BUMN/BUMD" id="bumn">
+                        <label for="bumn">8. BUMN/BUMD</label>
+                        <input type="radio" name="pekerjaan" value="Pensiunan" id="pensiunan">
+                        <label for="pensiunan">9. Pensiunan</label>
+                        <input type="radio" name="pekerjaan" value="Lainnya" id="pekerjaanLainnya">
+                        <label for="pekerjaanLainnya">10. Lainnya</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>13. Pendidikan:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="pendidikan" value="SD" id="sd">
+                        <label for="sd">1. SD</label>
+                        <input type="radio" name="pendidikan" value="SLTP" id="sltp">
+                        <label for="sltp">2. SLTP</label>
+                        <input type="radio" name="pendidikan" value="SLTA" id="slta">
+                        <label for="slta">3. SLTA</label>
+                        <input type="radio" name="pendidikan" value="D1/D2/D3/SM" id="diploma">
+                        <label for="diploma">4. D1/D2/D3/SM</label>
+                        <input type="radio" name="pendidikan" value="S1" id="s1">
+                        <label for="s1">5. S1</label>
+                        <input type="radio" name="pendidikan" value="S2" id="s2">
+                        <label for="s2">6. S2</label>
+                        <input type="radio" name="pendidikan" value="S3" id="s3">
+                        <label for="s3">7. S3</label>
+                        <input type="radio" name="pendidikan" value="Lainnya" id="pendidikanLainnya">
+                        <label for="pendidikanLainnya">8. Lainnya</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>14. Pengalaman Haji:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="pengalamanHaji" value="Belum Pernah" id="belumPernah">
+                        <label for="belumPernah">1. Belum Pernah</label>
+                        <input type="radio" name="pengalamanHaji" value="Pernah" id="pernah">
+                        <label for="pernah">2. Pernah Tahun</label>
+                        <input type="text" maxlength="4" class="tahun-haji-input" id="tahunHaji" placeholder="YYYY">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>15. Status Perkawinan:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="statusPerkawinan" value="Belum Menikah" id="belumMenikah">
+                        <label for="belumMenikah">1. Belum Menikah</label>
+                        <input type="radio" name="statusPerkawinan" value="Sudah Menikah" id="sudahMenikah">
+                        <label for="sudahMenikah">2. Sudah Menikah</label>
+                        <input type="radio" name="statusPerkawinan" value="Duda" id="duda">
+                        <label for="duda">3. Duda</label>
+                        <input type="radio" name="statusPerkawinan" value="Janda" id="janda">
+                        <label for="janda">4. Janda</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label>16. Nama Bank:</label>
+                    <input type="text" class="text-input" id="namaBank">
+                </div>
+
+                <div class="form-row">
+                    <label>17. Nomor Rekening:</label>
+                    <div class="rekening-inputs">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek1">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek2">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek3">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek4">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek5">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek6">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek7">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek8">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek9">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek10">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek11">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek12">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek13">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek14">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek15">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek16">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek17">
+                        <input type="text" maxlength="1" class="rekening-box" id="rek18">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="signature-area">
+                    <div class="left-signature">
+                        <p>Petugas Verifikasi/Pendaftaran</p>
+                        <div class="signature-space"></div>
+                        <p>......................................................</p>
+                        <p>NIP.</p>
+                    </div>
+                    <div class="right-signature">
+                        <p>Banda Aceh, ......................................</p>
+                        <p>Calon Jemaah Haji</p>
+                        <div class="signature-space"></div>
+                        <p>......................................................</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="previewForm" class="btn-preview">Preview Form</button>
+                <button type="button" id="downloadPDF" class="btn-download">Download PDF</button>
+                <button type="reset" class="btn-reset">Reset Form</button>
+            </div>
+        </form>
+        
+        <!-- Preview Modal -->
+        <div id="previewModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Preview Form Pelimpahan Porsi Haji</h2>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body" id="previewContent">
+                    <!-- Preview content will be inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 by PHU-ACEH | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
